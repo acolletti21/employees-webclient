@@ -1,0 +1,11 @@
+<h1>Employee Info</h1>
+
+<p><%= @employee["first_name"] %> <%= @employee["last_name"] %></p>
+<p>Email: <%= @employee["email"] %></p>
+<h4>Address: </h4>
+ <%= @employee["addresses"].each do |address| %>
+  <p><%= @employee["address_1"] %></p>
+  <p><%= @employee["address_2"] %></p>
+  <p><%= @employee["city"] %></p>
+  <p><%= @employee["state"] %></p>
+<%end%>
