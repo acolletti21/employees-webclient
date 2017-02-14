@@ -69,9 +69,9 @@ class Employee
     Employee.new(response_body)
   end
 
-  def update 
+  def update(employee_info)
     response_body = Unirest.patch(
-                              "#{ ENV['API_HOST_URL'] }/api/v1/employees/#{params[:id]}",
+                              "#{ ENV['API_HOST_URL'] }/api/v1/employees/#{ id}",
                               headers: HEADERS
                               paramaters: employee_info
                               ).body

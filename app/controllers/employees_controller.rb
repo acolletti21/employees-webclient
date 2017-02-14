@@ -23,7 +23,7 @@ class EmployeesController < ApplicationController
   end
 
   def edit
-    @employee = Unirest.get("#{ ENV['API_HOST_URL'] }/api/v1/employees/#{params[:id]}.json").body
+    @employee = Employee.find(params[:id])
   end
 
   def update
